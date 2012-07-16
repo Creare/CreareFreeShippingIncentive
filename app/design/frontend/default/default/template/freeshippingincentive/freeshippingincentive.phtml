@@ -1,0 +1,27 @@
+<?php
+/*
+* Creare (E-commerce Web Design)
+* FreeShippingIncentive
+*
+* Display the remaining balance to qualify for free shipping
+*
+*/
+?>
+<?php if($this->isFreeShippingEnabled()): ?>
+	<?php if($this->getRemainingAmount()): ?>
+    <div class="block">
+      <div class="block-title"> <strong><span>Shipping Offer</span></strong> </div>
+      <div class="block-content">
+        <p class="empty a-center">You have to spend <strong><?php echo $this->getMinimumValue(); ?></strong> to qualify for <strong>FREE SHIPPING</strong>.</p>
+        <p class="empty a-center">You have to spend <strong><?php echo $this->getRemainingAmount(); ?></strong> more to qualify for <strong>FREE SHIPPING</strong>.</p>
+      </div>
+    </div>
+    <?php else: ?>
+    <div class="block">
+      <div class="block-title"> <strong><span>Shipping Offer</span></strong> </div>
+      <div class="block-content">
+        <p class="block-subtitle a-center">You have qualified for FREE SHIPPING.</p>
+      </div>
+    </div>
+    <?php endif; ?>
+<?php endif; ?>

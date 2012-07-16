@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+  <modules> 
+  <Creare_FreeShippingIncentive>
+    <version>0.1.0</version>
+  </Creare_FreeShippingIncentive>
+  </modules>
+  <frontend>
+    <routers>
+      <freeshippingincentive>
+        <use>standard</use>
+        <args>
+          <module>Creare_FreeShippingIncentive</module>
+          <frontName>freeshippingincentive</frontName>
+        </args>
+      </freeshippingincentive>
+    </routers>
+    <layout>
+      <updates>
+        <freeshippingincentive>
+          <file>freeshippingincentive.xml</file>
+        </freeshippingincentive>
+      </updates>
+    </layout>
+  </frontend>
+  <global>
+    <blocks>
+      <freeshippingincentive>
+        <class>Creare_FreeShippingIncentive_Block</class>
+      </freeshippingincentive>
+    </blocks>
+  </global>
+</config>

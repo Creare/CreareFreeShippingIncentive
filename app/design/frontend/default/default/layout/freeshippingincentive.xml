@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout version="0.1.0">
+	<default>
+		<reference name="right">
+			<block type="freeshippingincentive/freeshippingincentive" name="freeshippingincentive" template="freeshippingincentive/freeshippingincentive.phtml" before="-" />
+		</reference>
+		<!--<reference name="left">
+			<block type="freeshippingincentive/freeshippingincentive" name="freeshippingincentive" template="freeshippingincentive/freeshippingincentive.phtml" before="-" />
+		</reference>-->
+	</default>
+</layout>
