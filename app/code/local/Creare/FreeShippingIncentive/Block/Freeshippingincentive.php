@@ -16,8 +16,7 @@ class Creare_FreeShippingIncentive_Block_FreeShippingIncentive extends Mage_Chec
 
 	public function getRemainingAmount()
 	{
-		$symbol = Mage::app()->getLocale()->currency(Mage::app()->getStore()->
-     getCurrentCurrencyCode())->getSymbol();	 
+		 
 	 	$total = Mage::getSingleton('checkout/cart')->getQuote()->getSubtotal();	
 		$minimum = Mage::getStoreConfig("carriers/freeshipping/free_shipping_subtotal");
 		
@@ -26,7 +25,7 @@ class Creare_FreeShippingIncentive_Block_FreeShippingIncentive extends Mage_Chec
 		if($value < 0){
 			return false;	
 		} else {	 
-			return $symbol.number_format($value,2);
+			return Mage::helper('core')->currency($value);
 		}
 	}
 	
